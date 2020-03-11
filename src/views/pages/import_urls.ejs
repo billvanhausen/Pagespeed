@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include("../partials/head") %>
+</head>
+<body>
+
+    <header>
+        <%- include("../partials/header") %>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="header">Import URLs</h1>
+            <div>
+                <form method="post" action="/import">
+                    <div class="form-group">
+                    <label for="page-url">Page URL</label>
+                    <input type="text" class="form-control" id="page_url" name="page_url" placeholder="Enter Page URL">
+                    <small><em>Example: https://host.com/path/to/page</em></small>
+                    </div>
+                    <div class="form-group">
+                    <label for="page-host">Page Host</label>
+                    <input type="text" class="form-control" id="page_host" name="page_host" placeholder="Enter Page Host">
+                    <small><em>Example: host.com</em></small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Import</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include("../partials/footer") %>
+    </footer>
+
+    <%- include("../partials/footer_scripts") %>
+</body>
+</html>
